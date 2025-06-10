@@ -117,9 +117,9 @@
       "Key": "emailservice",
       "Config": [
         {
-          "Name": "Email Service",
+          "Name": "EmailService",
           "Version": "v1",
-          "Url": "http://localhost:5004/swagger/v1/swagger.json"
+          "Url": "http://emailservice:8080/swagger/v1/swagger.json"
         }
       ]
     },
