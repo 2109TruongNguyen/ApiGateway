@@ -1,0 +1,160 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/qdrant/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/qdrant/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "qdranthelperservice"
+    },
+    {
+      "DownstreamPathTemplate": "/api/schedule/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/api/schedule/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "scheduleservice"
+    },
+    {
+      "DownstreamPathTemplate": "/api/email/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/email/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "emailservice"
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/auth/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "authservice"
+    },
+    {
+      "DownstreamPathTemplate": "/api/otp/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/otp/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "authservice"
+    },
+    {
+      "DownstreamPathTemplate": "/api/users/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/users/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "userservice"
+    },
+    {
+      "DownstreamPathTemplate": "/api/chat/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/chat/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "chatservice"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "qdranthelperservice",
+      "Config": [
+        {
+          "Name": "QdrantHelper Service",
+          "Version": "v1",
+          "Url": "http://localhost:8000/openapi.json"
+        }
+      ]
+    },
+    {
+      "Key": "scheduleservice",
+      "Config": [
+        {
+          "Name": "Schedule Service",
+          "Version": "v1",
+          "Url": "http://localhost:5005/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "emailservice",
+      "Config": [
+        {
+          "Name": "Email Service",
+          "Version": "v1",
+          "Url": "http://localhost:5004/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "chatservice",
+      "Config": [
+        {
+          "Name": "Chat Service",
+          "Version": "v1",
+          "Url": "http://localhost:5001/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "authservice",
+      "Config": [
+        {
+          "Name": "Auth Service",
+          "Version": "v1",
+          "Url": "http://localhost:5003/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "userservice",
+      "Config": [
+        {
+          "Name": "User Service",
+          "Version": "v1",
+          "Url": "http://localhost:5002/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  }
+}
